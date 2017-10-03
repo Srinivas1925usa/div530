@@ -33,6 +33,7 @@ object AvgRevenueDaily{
     return
   }
    */
+  
    val ordersRDD = sc.textFile(inputPath + "/orders")
    val orderItemsRDD = sc.textFile(inputPath + "/order_items")
    val ordersCompleted = ordersRDD.filter (rec => (rec.split(",")(3) == "COMPLETE"))
